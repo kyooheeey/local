@@ -1,0 +1,23 @@
+@mixin mq_up-pc {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mq_down-sp {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+.u-pc {
+  @include mq_down-sp() {
+    display: none !important;
+  }
+}
+
+.u-sp {
+  @include mq_up-pc() {
+    display: none !important;
+  }
+}

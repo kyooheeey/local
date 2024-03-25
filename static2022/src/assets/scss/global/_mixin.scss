@@ -1,0 +1,52 @@
+@use '../global/a_mq' as g;
+@use "sass:math";
+
+@mixin font_lt {
+  font-family: "ゴシックMB101 L", sans-serif;
+}
+
+@mixin font_md {
+  font-family: "ゴシックMB101 M", sans-serif;
+}
+
+@mixin font_demi {
+  font-family: "ゴシックMB101 DB", sans-serif;
+}
+
+@mixin  font_en {
+  font-family: neue-haas-grotesk-display, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  
+  // font-weight: 300;
+  // font-family: neue-haas-grotesk-display, sans-serif;
+  // font-style: normal;
+}
+
+@mixin content-w {
+  width: math.div(295, 375) * 100%;
+  margin: 0 auto;
+
+  @include g.mq_up-pc {
+    width: calc(100% - 400px);
+    max-width: 1160px;
+  }
+}
+
+@mixin content-pc {
+
+  @include g.mq_up-pc {
+    width: calc(100% - 400px);
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+@mixin content-sp {
+
+  @include g.mq_down-sp {
+    width: calc(295 / 375 * 100%);
+    margin: 0 auto;
+  }
+}

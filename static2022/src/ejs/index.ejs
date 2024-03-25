@@ -1,0 +1,19 @@
+<% 
+const meta = {
+  id: '',
+  title: '',
+  description: '',
+  keywords: '',
+  filePath: './',
+  url: '',
+  canonical: ''
+}
+%>
+
+<%- include('./templates/_head', {meta: meta}) %>
+<%- include('./templates/_header', {meta: meta}) %>
+
+<main class="p-<%= meta.id %>__main">
+
+</main>
+<%- include('./templates/_footer', {meta: meta}) %>

@@ -1,0 +1,16 @@
+@use '../global/' as g;
+
+.u-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.u-flex--pc {
+
+  @include g.mq_up-pc {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
